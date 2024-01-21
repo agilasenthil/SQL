@@ -85,3 +85,18 @@ WHERE FirstName IN ('Jim' , 'Pam')
 SELECT *
 FROM EmployeeDemographics
 WHERE FirstName IS NULL
+
+-- GROUP BY
+SELECT GENDER, COUNT(Gender)
+FROM EmployeeDemographics
+GROUP BY Gender  --- Displays Female  1 , Male  8
+
+SELECT GENDER, AGE, COUNT(Gender) AS GenderCount
+FROM EmployeeDemographics
+WHERE Age > 29
+GROUP BY Gender, AGE
+
+--ORDER BY
+SELECT *
+FROM EmployeeDemographics
+ORDER BY Age DESC, FirstName DESC
