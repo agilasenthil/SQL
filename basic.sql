@@ -48,24 +48,40 @@ SELECT COUNT(LastName) AS LastNameCount -- displays the table with column name a
 SELECT MAX(Salary) , MIN(Salary), AVG(Salary) -- counts the max, min and avg in the salary column
 
 --WHERE Statement
+-- =, <= , >= , AND, OR, LIKE, NULL, NOT NULL, IN
+
+-- '='
 SELECT *
 FROM EmployeeDemographics
 WHERE FirstName = 'Jim'
 
+-- '<=' , AND
 SELECT *
 FROM EmployeeDemographics
 WHERE Age <=30 AND Gender = 'Male'
 
+-- '<=' , OR
 SELECT *
 FROM EmployeeDemographics
 WHERE Age <=30 OR Gender = 'Male'
 
+-- LIKE
 SELECT *
 FROM EmployeeDemographics
 WHERE LastName LIKE 'S%'  -- LastName starts with S
 
+-- LIKE
 SELECT *
 FROM EmployeeDemographics
 WHERE LastName LIKE 'S%o%' -- Starts with S and has O in the LastName
 --This particular S o would be in order for
 
+-- IN
+SELECT *
+FROM EmployeeDemographics
+WHERE FirstName IN ('Jim' , 'Pam')
+
+-- NULL
+SELECT *
+FROM EmployeeDemographics
+WHERE FirstName IS NULL
