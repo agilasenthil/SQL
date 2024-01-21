@@ -67,3 +67,5 @@ WHERE LastName LIKE 'S%'  -- LastName starts with S
 SELECT *
 FROM EmployeeDemographics
 WHERE LastName LIKE 'S%o%' -- Starts with S and has O in the LastName
+--This particular S o would be in order for
+
